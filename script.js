@@ -4,7 +4,7 @@ document.addEventListener("mousemove", (e) => {
 
   const loadborder = document.getElementById("loadborder");
   const percentage = document.getElementById("percentage");
-
+  const loadbar = document.getElementById("loadbar");
 
 
   const setParallax = (el, speed) => {
@@ -13,7 +13,7 @@ document.addEventListener("mousemove", (e) => {
 
   setParallax(loadborder, 14);
   setParallax(percentage, 10);
-
+  setParallax(loadbar, 0);
 
 
 
