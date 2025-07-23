@@ -1,0 +1,79 @@
+#kuttate{
+	position: fixed;
+	top: -5px;
+	animation-name: movein;
+	animation-duration: 1s;
+}
+#loadborder{
+	width: 1000px;
+	height: 50px;
+	margin: auto;
+	border: 5px solid black;
+	border-radius: 10px;
+	position: relative;
+	top: 900px;
+	font-size: 40px;
+	animation-name: movein;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+
+}
+
+@keyframes spin{
+	100%{transform: rotateZ(360deg)}
+}
+
+@keyframes movein{
+	from{transform: translateY(20px)}
+}
+
+
+#loadanim{
+	margin: auto;
+	position: relative;
+	display: block;
+	position: relative;
+	top: 200px;
+	animation-name: spin;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(12);
+}
+#percentage{
+	font-size: 30px;
+	font-family: "Special Gothic Expanded One";
+	margin-right: auto;
+	position: absolute;
+	top: 55px;
+	animation-name: movein;
+	animation-duration: 1s;
+
+}
+
+#loadborder,
+#percentage,
+#loadanim {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+.gradient-top,
+.gradient-bottom {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 500px; /* adjust thickness */
+  pointer-events: none; /* so it doesn’t block mouse interaction */
+  z-index: 9999;
+}
+
+.gradient-top {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), transparent);
+}
+
+.gradient-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+}
+
+
