@@ -1,68 +1,95 @@
-#kuttate{
-	position: fixed;
-	top: -5px;
-	animation-name: movein;
-	animation-duration: 1s;
-}
-#loadborder{
-	width: 1000px;
-	height: 50px;
-	margin: auto;
-	border: 5px solid black;
-	border-radius: 10px;
-	position: relative;
-	top: 900px;
-	font-size: 40px;
-	animation-name: movein;
-	animation-duration: 1s;
-	animation-timing-function: ease-out;
-
-}
-
-@keyframes spin{
-	100%{transform: rotateZ(360deg)}
-}
-
-@keyframes movein{
-	from{transform: translateY(20px)}
+#kuttate {
+  position: fixed; 
+  top: 5px;      
+  left: 10px;   
+  height: 100px;     
+  max-height: 150px;
+  animation-name: movein;
+  animation-duration: 1s;
 }
 
 
-#loadanim{
-	margin: auto;
-	position: relative;
-	display: block;
-	position: relative;
-	top: 200px;
-	animation-name: spin;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: steps(12);
+#loadborder {
+  width: 90%;
+  max-width: 1000px;
+  height: 50px;
+  margin: auto;
+  border: 5px solid black;
+  border-radius: 10px;
+  position: relative;
+  top: 60vh;
+  font-size: 1.16vw;
+  animation-name: movein;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
-#percentage{
-	font-size: 30px;
-	font-family: "Special Gothic Expanded One";
-	margin-right: auto;
-	position: absolute;
-	top: 55px;
-	animation-name: movein;
-	animation-duration: 1s;
+#loadbar{
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 12%;
+  background-color: black;
+  border-radius: 5px;
+  position: absolute;
 
+  font-size: 1.16vw;
+
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(-50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotateZ(360deg);
+  }
+}
+
+
+@keyframes movein {
+  from { transform: translateY(20px); }
+}
+
+#loadanim {
+  position: fixed;  
+  top: 10vh;     
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 50vw;
+  max-width: 500px;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(12);
+  z-index: 500; 
+}
+
+
+#percentage {
+  font-size: 2.3vw;
+  font-family: "Special Gothic Expanded One";
+  margin-right: auto;
+  position: absolute;
+  top: 55px;
+  animation-name: movein;
+  animation-duration: 1s;
 }
 
 #loadborder,
 #percentage,
+#loadbar,
 #loadanim {
   will-change: transform;
   transition: transform 0.1s ease-out;
 }
+
 .gradient-top,
 .gradient-bottom {
   position: fixed;
   left: 0;
   width: 100%;
-  height: 500px; /* adjust thickness */
-  pointer-events: none; /* so it doesn’t block mouse interaction */
+  height: 500px;
+  pointer-events: none;
   z-index: 9999;
 }
 
@@ -76,4 +103,23 @@
   background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
 }
 
+/* Responsive media queries */
 
+@media (max-width: 600px) {
+  #loadborder {
+    top: 40vh;
+    font-size: 6vw;
+    width: 95%;
+  }
+
+  #loadanim {
+    top: 15vh;
+    width: 70vw;
+  }
+
+  #percentage {
+    font-size: 5vw;
+    top: 40px;
+    left: 5%;
+  }
+}
