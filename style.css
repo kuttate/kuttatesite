@@ -6,6 +6,7 @@
   max-height: 150px;
   animation-name: movein;
   animation-duration: 1s;
+  pointer-events: none;
 }
 
 
@@ -55,8 +56,8 @@
   top: 15vh;     
   left: 50%;
   transform: translateX(-50%); 
-  width: 50vw;
-  height: 50vw;
+  width: 25vw;
+  height: 25vw;
   max-width: 500px;
   max-height: 500px;
   animation-name: spin;
@@ -64,6 +65,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: steps(12);
   z-index: 500; 
+  pointer-events: none;
 }
 
 
@@ -75,6 +77,7 @@
   top: 55px;
   animation-name: movein;
   animation-duration: 1s;
+  pointer-events: none;
 }
 
 #loadborder,
@@ -107,7 +110,7 @@
 
 @media (max-width: 600px) {
   #loadborder {
-    top: 40vh;
+    top: 47vh;
     font-size: 6vw;
     width: 95%;
   }
@@ -124,3 +127,4 @@
     left: 5%;
   }
 }
+
