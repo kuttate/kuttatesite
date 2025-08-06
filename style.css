@@ -28,7 +28,7 @@
   top: 0px;
   left: 0px;
   height: 50px;
-  width: 12%;
+  width: 24%;
   background-color: black;
   border-radius: 5px;
   position: absolute;
@@ -127,4 +127,5 @@
     left: 5%;
   }
 }
+
 
